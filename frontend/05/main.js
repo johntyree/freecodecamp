@@ -20,5 +20,9 @@ function getCardData(query) {
         gsrinfo: "totalhits%7Csuggestion%7Crewrittenquery",
         gsrprop: "snippet%7Ctitlesnippet'",
     };
-    // $getJSON
+
+    return $.getJSON(url, params).done(function(data) {
+        console.log(data);
+    });
 }
+

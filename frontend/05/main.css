@@ -1,0 +1,38 @@
+body, .dark {
+    background-color: #092B40;
+    color: #FFFFFF;
+}
+
+[class^="col"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; }
+[class^="row"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; }
+
+input {
+    border-radius: 30%;
+}
+
+#query {
+    border-color: #D96F31;
+}
+
+.jumbotron {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card {
+    color: black;
+    background-color: #E6E6E7;
+    padding: 15px 40px;
+    margin: 0px;
+}
+
+.card .card-title {
+    font-style: bold;
+}
+
+.card .card-body {
+    font-size: 0.8em;
+}

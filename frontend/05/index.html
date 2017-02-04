@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Build a Wikipedia viewer</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript">
+  </script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron dark">
+      <div class="row">
+        <div class="col-xs-12 text-center center-block">
+          <p><a class="dark" href="https://en.wikipedia.org/wiki/Special:Random">Click here for a random article</a></p>
+          <input class="dark" type="search" name="query" id="query" value="" />
+          <p>Click icon to search<p>
+        </div>
+      </div>
+      <div hidden id="card-template">
+        <h3 class="card-title"></h3>
+        <p class="card-body"></p>
+      </div>
+      <div class="col card">
+        <h3 class="card-title">Banana</h3>
+        <div class="card-body"><p>A banana is like a giant dick, except it's
+          a fruit. It is radioactive and turns brown if you step on it.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

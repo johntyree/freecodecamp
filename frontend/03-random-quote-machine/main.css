@@ -1,0 +1,62 @@
+.container {
+  padding: 0;
+  margin: 0;
+    width 100%;
+    height 100%;
+}
+
+blockquote {
+  border-left: 0;
+}
+
+.container .jumbotron {
+  border-radius: 3px;
+  background-color: white;
+}
+
+#quote {
+  font-size: 1.5em;
+  padding: 0 0 20px 0;
+}
+
+.colored {
+  color: white;
+  transition: color 1s;
+}
+.back-colored {
+  color: white;
+  background-color: white;
+  transition: background-color 1s;
+}
+
+.tweet-button {
+  font-size: 180%;
+
+}
+
+.btn {
+  color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.quote-button {
+  padding: 10px;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid;
+}
+
+#quoteBox {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  width: 550px;
+  transform: translate(-50%,0%);
+    //border: 1px dashed deeppink;
+}
+

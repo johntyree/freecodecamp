@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+
+  <link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://darksky.net/js/lib/skycons.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <style type="text/css">
+    body {
+      color: white;
+      background-color: #151515;
+    }
+
+    #cite {
+      font-size: 50%;
+    }
+
+    h1 {
+      font-size: 475%;
+    }
+
+    body p {
+      font-size: 2em;
+    }
+
+    #units {
+      color: #5050FF;
+    }
+
+    #O {
+      display: inline-block;
+      margin: -13px -22px;
+      width: 95px;
+      height: 65px;
+      padding: 0px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <h1>Free C<canvas id="O"></canvas>de Camp</h1>
+      <h1>Weather App</h1>
+      </br>
+      <p><span id="city">Palo Alto</span>, <span id="state"></span>, <span id="country">US</span></p>
+      <p><span id="tempC">11</span><span id="tempF" hidden>52</span> &deg;<span id="units">C</span></p>
+      <p id="description">Clear</p>
+      <canvas id="icon"></canvas>
+      <p><a id="cite" href="https://darksky.net/poweredby">Powered by Dark Sky</a>
+    </div>
+  </div>
+</body>
+</html>

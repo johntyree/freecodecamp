@@ -13,24 +13,20 @@
 </head>
 <body>
   <div class="container">
-    <div class="jumbotron dark">
+    <div class="jumbotron dark centered">
       <div class="row">
         <div class="col-xs-12 text-center center-block">
           <p><a class="dark" href="https://en.wikipedia.org/wiki/Special:Random">Click here for a random article</a></p>
-          <input class="dark" type="search" name="query" id="query" value="" />
+            <input class="dark" type="search" name="query" id="query" value="" />
           <p>Click icon to search<p>
         </div>
       </div>
-      <div hidden id="card-template">
-        <h3 class="card-title"></h3>
-        <p class="card-body"></p>
-      </div>
-      <div class="col card">
-        <h3 class="card-title">Banana</h3>
-        <div class="card-body"><p>A banana is like a dildo, except it's
-          a fruit. It is also slightly radioactive.</p>
-      </div>
+      <div id="cards" class="row"></div>
     </div>
+  </div>
+  <div hidden id="card-template" class="col-xs-12 card">
+    <h3 class="card-title"></h3>
+    <p class="card-body"></p>
   </div>
 </body>
 </html>

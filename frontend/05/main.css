@@ -3,8 +3,8 @@ body, .dark {
     color: #FFFFFF;
 }
 
-[class^="col"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; }
-[class^="row"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; }
+/* [class^="col"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; } */
+/* [class^="row"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; } */
 
 input {
     border-radius: 30%;
@@ -17,16 +17,26 @@ input {
 .jumbotron {
     position: absolute;
     width: 90%;
+}
+
+.centered {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    transition: all 1s;
 }
 
 .card {
     color: black;
     background-color: #E6E6E7;
     padding: 15px 40px;
-    margin: 0px;
+    margin: 5px 0px;
+    border-left: 5px solid #092B40;
+    border-right: 5px solid #092B40;
+}
+
+.card:hover {
+    border-left: 5px solid #D96F31;
 }
 
 .card .card-title {

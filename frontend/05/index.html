@@ -12,21 +12,28 @@
 
 </head>
 <body>
-  <div class="container">
+  <div class="container-responsive">
     <div class="jumbotron dark centered">
       <div class="row">
-        <div class="col-xs-12 text-center center-block">
-          <p><a class="dark" href="https://en.wikipedia.org/wiki/Special:Random">Click here for a random article</a></p>
-            <input class="dark" type="search" name="query" id="query" value="" />
-          <p>Click icon to search<p>
+        <div class="col-xs-12 text-center">
+          <p><a target="_blank" class="dark" href="https://en.wikipedia.org/wiki/Special:Random">Click here for a random article</a></p>
+            <label class="search" for="query">
+              <input required id="query" class="dark" type="search" name="query" value="" />
+              <p>Click icon to search</p>
+            </label>
+          </div>
         </div>
       </div>
-      <div id="cards" class="row"></div>
+      <div id="cards" class="row below-screen"></div>
     </div>
   </div>
-  <div hidden id="card-template" class="col-xs-12 card">
-    <h3 class="card-title"></h3>
-    <p class="card-body"></p>
+  <div hidden id="card-template">
+    <a target="_blank" href=#>
+    <div class="col-xs-10 col-xs-offset-1 card">
+      <p class="card-title"></p>
+      <p class="card-body"></p>
+    </div>
+    </a>
   </div>
 </body>
 </html>

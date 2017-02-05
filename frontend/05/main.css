@@ -6,33 +6,53 @@ body, .dark {
 /* [class^="col"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; } */
 /* [class^="row"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; } */
 
-input {
-    border-radius: 30%;
-}
-
-#query {
+.search input[type="search"] {
     border-color: #D96F31;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 5px;
+    box-shadow: none;
+    cursor: pointer;
+    height: 42px;
+    outline: none;
+    padding: 0 0 0 35px;
+    transition: all 0.5s;
+    width: 0;
 }
 
-.jumbotron {
-    position: absolute;
-    width: 90%;
+.search input[type="search"]:focus, .search input[type="search"]:valid {
+    border-radius: 40px;
+    cursor: text;
+    padding: 0;
+    text-indent: 10px;
+    width: 100%;
+}
+
+.search input[type="search"]:focus + p, .search input[type="search"]:valid + p {
+    display: none;
 }
 
 .centered {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    transition: all 1s;
+    transition: all 0.3s
+}
+
+.jumbotron {
+    margin-bottom: 0px;
 }
 
 .card {
     color: black;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 15px 25px;
     background-color: #E6E6E7;
-    padding: 15px 40px;
-    margin: 5px 0px;
     border-left: 5px solid #092B40;
     border-right: 5px solid #092B40;
+    transition: margin-top ease-out 0.7s;
 }
 
 .card:hover {
@@ -40,9 +60,15 @@ input {
 }
 
 .card .card-title {
-    font-style: bold;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .card .card-body {
-    font-size: 0.8em;
+    /* font-size: 1.8em; */
 }
+
+.shift-down {
+    margin-top: 200px;
+}
+

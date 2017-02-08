@@ -62,11 +62,12 @@ $(document).ready(function() {
                 runQuery(query);
                 break;
             case 'Escape':
+                console.log('blurring 2');
                 $('#query').empty().blur();
                 break;
         };
     }).focus();
-    $('.eks').click(function() {
+    $('.eks-box').click(function() {
         $('#query').empty().blur();
     });
 });

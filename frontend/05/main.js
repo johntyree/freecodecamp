@@ -1,6 +1,5 @@
 function loadCards(data) {
     var pages = data.query.pages
-    console.log(pages);
     for (page in pages) {
         if (!pages.hasOwnProperty(page)) continue;
         addCard(pages[page].title, pages[page].extract, pages[page].fullurl);
@@ -10,7 +9,7 @@ function loadCards(data) {
 function clearCards() {
     $('.jumbotron').addClass('centered');
     $('#cards').empty();
-    $('#cards').addClass('below-screen');
+    $('#cards').addClass('shift-down');
 }
 
 function addCard(title, body, link) {
@@ -57,9 +56,17 @@ function runQuery(query) {
 
 $(document).ready(function() {
     $('#query').keydown(function(e) {
-        if (e.key === 'Enter') {
-            var query = $('#query').get()[0].value;
-            runQuery(query);
-        }
+        switch (e.key) {
+            case 'Enter':
+                var query = $('#query').get()[0].value;
+                runQuery(query);
+                break;
+            case 'Escape':
+                $('#query').empty().blur();
+                break;
+        };
     }).focus();
+    $('.eks').click(function() {
+        $('#query').empty().blur();
+    });
 });

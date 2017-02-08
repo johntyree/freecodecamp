@@ -17,23 +17,31 @@
       <div class="row">
         <div class="col-xs-12 text-center">
           <p><a target="_blank" class="dark" href="https://en.wikipedia.org/wiki/Special:Random">Click here for a random article</a></p>
+        </div>
+        <div class="col-xs-12 text-center">
+          <div id="input-cancel" class="eks center-block">
+            <input required id="query" class="dark" type="search" name="query" value="" />
+            <div class="handle"></div>
+            <div class="eks-box">
+              <div class="eks-front"></div>
+              <div class="eks-back"></div>
+            </div>
             <label class="search" for="query">
-              <input required id="query" class="dark" type="search" name="query" value="" />
               <p>Click icon to search</p>
             </label>
           </div>
         </div>
+        <div id="cards" class="row below-screen"></div>
       </div>
-      <div id="cards" class="row below-screen"></div>
     </div>
-  </div>
-  <div hidden id="card-template">
-    <a target="_blank" href=#>
-    <div class="col-xs-10 col-xs-offset-1 card">
-      <p class="card-title"></p>
-      <p class="card-body"></p>
+    <div hidden id="card-template">
+      <a target="_blank" href=#>
+        <div class="col-xs-10 col-xs-offset-1 card">
+          <p class="card-title"></p>
+          <p class="card-body"></p>
+        </div>
+      </a>
     </div>
-    </a>
   </div>
 </body>
 </html>

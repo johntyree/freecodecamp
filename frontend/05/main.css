@@ -3,10 +3,7 @@ body, .dark {
     color: #FFFFFF;
 }
 
-/* [class^="col"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; } */
-/* [class^="row"] { background-color: rgba(255, 0, 0, 0.3); border-color: purple; border-style: solid; } */
-
-.search input[type="search"] {
+input[type="search"] {
     border-color: #D96F31;
     border-radius: 100%;
     border-style: solid;
@@ -15,21 +12,112 @@ body, .dark {
     cursor: pointer;
     height: 42px;
     outline: none;
-    padding: 0 0 0 35px;
-    transition: all 0.5s;
+    padding: 30px 0 0 35px;
     width: 0;
+    max-width: 200px;
+    transition: all 0.25s 0.35s;
 }
 
-.search input[type="search"]:focus, .search input[type="search"]:valid {
+input[type="search"]:focus,
+input[type="search"]:valid {
     border-radius: 40px;
     cursor: text;
     padding: 0;
+    margin: 0;
     text-indent: 10px;
     width: 100%;
+    transition: all 0.2s 0.2s;
 }
 
-.search input[type="search"]:focus + p, .search input[type="search"]:valid + p {
-    display: none;
+.eks {
+    position: relative;
+    max-width: 200px;
+    height: 42px;
+}
+
+.eks-box {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 20%;
+    min-width: 40px;
+    left: 80%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.eks-front {
+    position: relative;
+    top: -10px;
+    left: 100%;
+    height: 16px;
+    width: 16px;
+    border-left: 2px solid #D96F31;
+    transform-origin: center;
+    transform: rotate(45deg);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.eks-back {
+    position: relative;
+    top: 13px;
+    left: 100%;
+    height: 16px;
+    width: 16px;
+    border-left: 2px solid #D96F31;
+    transform-origin: center;
+    transform: rotate(-45deg);
+    transition: all 0.4s 0.1s;
+    cursor: pointer;
+}
+
+input[type="search"]:focus ~ .eks-box,
+input[type="search"]:valid ~ .eks-box {
+    height: 100%;
+    transition 
+}
+
+input[type="search"]:focus ~ .eks-box > .eks-front,
+input[type="search"]:valid ~ .eks-box > .eks-front {
+    top: 18px;
+    left: 50%;
+    transition: all 0.15s 0.43s;
+}
+
+input[type="search"]:focus ~ .eks-box > .eks-back,
+input[type="search"]:valid ~ .eks-box > .eks-back {
+    top: -8px;
+    left: 50%;
+    transition: all 0.15s 0.40s;
+}
+
+.handle {
+    position: absolute;
+    bottom: 6px;
+    left: 57%;
+    border-left: 4px solid #D96F31;
+    height: 16px;
+    transform: rotate(-225deg);
+    transform-origin: bottom left;
+    transition: all 0.2s 0.55s;
+}
+
+input[type="search"]:focus ~ .handle,
+input[type="search"]:valid ~ .handle {
+    height: 0px;
+    transition: all 0.3s;
+}
+
+input[type="search"] ~ label > p {
+    opacity: 100;
+    transition: opacity 0.3s 0.5s;
+}
+
+input[type="search"]:focus ~ label > p,
+input[type="search"]:valid ~ label > p {
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .centered {
@@ -41,7 +129,7 @@ body, .dark {
 }
 
 .jumbotron {
-    margin-bottom: 0px;
+    margin-bottom: -40px;
 }
 
 .card {

@@ -7,9 +7,11 @@ function loadCards(data) {
 }
 
 function clearCards() {
-    $('.jumbotron').addClass('centered');
-    $('#cards').empty();
-    $('#cards').addClass('shift-down');
+    $('#cards').children().fadeOut(400, function() {
+        $('#cards').addClass('shift-down');
+        $('#cards').empty();
+        $('.jumbotron').addClass('centered');
+    });
 }
 
 function addCard(title, body, link) {
@@ -54,6 +56,12 @@ function runQuery(query) {
     $.ajax(url, settings).done(loadCards).fail(function(e) {console.error(e)});
 }
 
+function reset() {
+    clearCards();
+    $('#query').blur().get()[0].value = "";
+}
+
+
 $(document).ready(function() {
     $('#query').keydown(function(e) {
         switch (e.key) {
@@ -62,12 +70,11 @@ $(document).ready(function() {
                 runQuery(query);
                 break;
             case 'Escape':
-                console.log('blurring 2');
-                $('#query').empty().blur();
+                reset();
                 break;
         };
     }).focus();
     $('.eks-box').click(function() {
-        $('#query').empty().blur();
+        reset();
     });
 });

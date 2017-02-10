@@ -1,0 +1,46 @@
+#header {
+    background-color: #5C5457;
+    color: #E1E1E6;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.offline {
+    background-color: #4A5E82;
+}
+
+.online {
+    background-color: #B8CCA6;
+}
+
+.card {
+    border: 1px solid black;
+}
+
+div {
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.streamer-name {
+}
+
+.streamer-summary {
+}
+
+.streamer-pic {
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    border: 2px solid #E1E1E6;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+    /* background-image: url("https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-channel_offline_image-5a8657f8393c9d85-1920x1080.jpeg"); */
+    /* background-size: contain; */
+    /* background-color: #B8CCA6; */

@@ -1,7 +1,8 @@
 $(document).ready(function () {
     var users = [
         "ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp",
-        "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"
+        "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas",
+        "brunofin", "comster404"
     ];
     user_data = {};
     users.forEach(u => user_data[u] = {});
@@ -49,18 +50,20 @@ function show_user_cards(user_data) {
     $cards = $('#cards').empty();
     for (name in user_data) {
         if (!user_data.hasOwnProperty(name)) continue;
-        $cards.append(build_card(user_data[name]));
+        $cards.append(build_card(name, user_data[name]));
     }
     $cards.find('[hidden]').attr('hidden', null);
 }
 
-function build_card(data) {
-    var img_url = data.user.logo;
-    var name = data.user.display_name;
+function build_card(name, data) {
+    console.log(data);
+    var dummy_img_url = "https://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=?";
+    var img_url = data.user.logo || dummy_img_url;
+    var name = data.user.display_name || name;
     var url = "https://www.twitch.tv/" + data.user.name;
 
     $card = $('#card-template').clone().attr('id', null);
-    $card.find('img').attr('src', data.user.logo);
+    $card.find('img').attr('src', img_url);
     $card.find('.streamer-name > a').attr('href', url).text(name);
 
     if (data.stream.stream !== null) {
@@ -74,7 +77,7 @@ function build_card(data) {
         $card.find('.streamer-summary').text(status);
     } else {
         $card.addClass('offline');
-        $card.find('.streamer-game').text('Offline');
+        $card.find('.streamer-game').text(data.user.message || 'Offline');
     }
     return $card;
 }

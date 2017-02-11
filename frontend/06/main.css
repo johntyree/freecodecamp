@@ -1,46 +1,127 @@
-#header {
+body {
+    background-color: #ECF0E7;
+}
+
+.container {
+    margin: 0px auto;
+    padding: 0px 10px;
+    max-width: 700px;
+}
+
+#header, #footer {
     background-color: #5C5457;
     color: #E1E1E6;
-    font-size: 32px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+h1 {
     font-weight: bold;
+    padding: 10px;
+}
+
+#cards {
+    margin: 2px 0px;
+}
+
+.card {
+    padding: 5px;
+    border: 1px solid #E1E1E6;
+}
+
+/* div { */
+    /* border: 1px solid red; */
+/* } */
+
+#menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 80px;
+    bottom: 10px;
+    right: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.toggle {
+    width: 80px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 80%;
+    background-color: #E1E1E6;
+    color: #5C5457;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 0px 4px;
+    transition: margin-left 0.8s;
+}
+
+input[type="radio"]:checked + .toggle,
+input[type="radio"] + .toggle:hover {
+    margin-left: 1%;
+    transition: margin-left 0.8s;
+}
+
+.circle {
+    float: left;
+    margin-top: 5px;
+    padding: 7px 7px 0 0;
+    background-color: #5C5457;
+    border: 1px solid #5C5457;
+    border-radius: 100%;
+}
+
+.streamer-pic {
+    height: 50px;
+}
+
+.streamer-img {
+    max-height: 50px;
+    max-width: 50px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 3px solid #E1E1E6;
+}
+
+.streamer-name,
+.streamer-info {
+    line-height: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.streamer-info {
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin: 10px auto;
+        width: 700px;
+    }
+
+    .streamer-name,
+    .streamer-info {
+        line-height: 50px;
+        height: 50px;
+    }
+}
+
+.streamer-name > a,
+.streamer-info > a {
+    color: inherit;
 }
 
 .offline {
     background-color: #4A5E82;
+    color: #E1E1E6;
 }
 
 .online {
     background-color: #B8CCA6;
 }
 
-.card {
-    border: 1px solid black;
-}
-
-div {
-    border: 2px solid red;
-    background-color: rgba(255, 0, 0, 0.2);
-}
-
-.streamer-name {
-}
-
-.streamer-summary {
-}
-
-.streamer-pic {
-    height: 48px;
-    width: 48px;
-    border-radius: 100%;
-    border: 2px solid #E1E1E6;
-}
-
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-}
-
-    /* background-image: url("https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-channel_offline_image-5a8657f8393c9d85-1920x1080.jpeg"); */
-    /* background-size: contain; */
-    /* background-color: #B8CCA6; */
